@@ -17,7 +17,6 @@ namespace Footballers
 {
     public partial class MainWindow : Window
     {
-        //private System.Windows.Controls.TextBlock SliderValue;
         List<Player> PlayerList = new List<Player>();
         public class Player
         {
@@ -75,36 +74,6 @@ namespace Footballers
             }
 
         }
-
-        //public void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        //{
-        //var slider = sender as Slider;
-        //double value = slider.Value;
-        //string sValue = value.ToString();
-
-        //SliderValueText.Text = "aaa";
-        //tbSettingText.Text = "Initial text contents of the TextBox.";
-        //SliderValue.Text = value.ToString("0.00");
-        //SliderValue.Text = value.ToString("F6");
-        //Update_Text();
-        //}
-
-        /*private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            Slider slider = e.OriginalSource as Slider;
-            if (slider != null)
-            {
-                //txtSliderValue.Text = slider.Value.ToString();
-            }
-        }*/
-        private void ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            Slider slider = e.OriginalSource as Slider;
-            if (slider != null)
-            {
-                //SliderValueText.Text = MySlider.Value.ToString();
-            }
-        }
         private void CreateCombo()
         {
             for(int i=15; i<=60; i++)
@@ -151,7 +120,6 @@ namespace Footballers
             else
             {
                 MessageBox.Show(information);
-                //wyswietlic information
             }
         }
 
@@ -166,15 +134,6 @@ namespace Footballers
                     PlayerList.RemoveAt(id);
                     Players_lb.Items.RemoveAt(id);
                 }
-                /*for(int i=0; i<PlayerList.Count(); i++)
-                {
-                    if(PlayerList[i].ToString() == selectedItem)
-                    {
-                        PlayerList.RemoveAt(i);
-                        Players_lb.Items.RemoveAt(i);
-                        break;
-                    }
-                }*/
             }
             else
             {
@@ -195,10 +154,6 @@ namespace Footballers
                     Weight_sl.Value = PlayerList[id].GetWeight();
                     Age_cb.SelectedItem = PlayerList[id].GetAge();
                 }
-            }
-            else
-            {
-                //MessageBox.Show("Nie wybrano zawodnika do modyfikacji");  //why to sie pojawia? xd
             }
         }
 
@@ -245,7 +200,6 @@ namespace Footballers
                 else
                 {
                     MessageBox.Show(information);
-                    //wyswietlic information
                 }
             }
             else
