@@ -1,0 +1,77 @@
+﻿<Window x:Class="Footballers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Footballers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+        </Grid>
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Label >Imie:</Label>
+                <TextBox Name="Name_tb" VerticalAlignment="Center" Width="100" Margin="28 0 0 0" GotFocus="FocusEventOnName">Podaj imie</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Nazwisko:</Label>
+                <TextBox Name="Surname_tb" VerticalAlignment="Center" Width="100" GotFocus="FocusEventOnSurname">Podaj nazwisko</TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label>Waga:</Label>
+                <Slider HorizontalAlignment="Left" 
+                        Margin="10,0,10,0" 
+                        VerticalAlignment="Top" 
+                        Width="135" 
+                        ValueChanged="ValueChanged"
+                        Name="Weight_sl"
+                        Minimum="50"
+                        Maximum="100"
+                        IsSnapToTickEnabled="True"
+                        TickFrequency="0.1"
+                        />
+                <TextBox Name="SliderValue_tb" Text="{Binding ElementName=Weight_sl,Path=Value}"/>
+
+            </StackPanel>
+            <StackPanel>
+                <Label >Wiek:</Label>
+                <ComboBox Name="Age_cb" Margin="5" Width="50">
+                    <ComboBoxItem IsSelected="True"></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Button Name="Add_b" Content="Dodaj" Click="AddClick" Padding="15" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0" Margin="5"/>
+                <Button Name="Delete_b" Content="Usuń" Click="DeleteClick" Padding="15" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" Margin="5"/>
+                <Button Name="Change_b" Content="Zmień" Click="ChangeClick" Padding="15" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="2" Margin="5"/>
+            </Grid>
+        </StackPanel>
+        <ListBox Name="Players_lb" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="OnItemInListBoxClick">
+        </ListBox>
+
+    </Grid>
+</Window>

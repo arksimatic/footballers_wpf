@@ -1,0 +1,14 @@
+C:\Users\admin\source\repos\Footballers\Footballers\bin\Debug\Footballers.exe.config
+C:\Users\admin\source\repos\Footballers\Footballers\bin\Debug\Footballers.exe
+C:\Users\admin\source\repos\Footballers\Footballers\bin\Debug\Footballers.pdb
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\Footballers.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\MainWindow.g.cs
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\App.g.cs
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\Footballers_MarkupCompile.cache
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\Footballers_MarkupCompile.lref
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\MainWindow.baml
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\Footballers.g.resources
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\Footballers.Properties.Resources.resources
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\Footballers.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\Footballers.exe
+C:\Users\admin\source\repos\Footballers\Footballers\obj\Debug\Footballers.pdb
